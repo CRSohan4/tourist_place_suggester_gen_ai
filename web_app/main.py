@@ -12,7 +12,8 @@ selected_country = st.sidebar.selectbox("Pick a country", ("India", "Australia",
 
 if selected_country:
     response = llm_service.suggest_tourist_place_name(selected_country)
-    st.header("Country: " + response['tourist_place_name'])
+    st.write("Country: " + selected_country)
+    st.header("Tourist Place: " + response['tourist_place_name'])
     
     st.write("**Description**")
     
